@@ -31,7 +31,7 @@ function upload() {
   else {
     encodedStr = encoded.substring(32, last_index_quote);
   }
-  var apigClient = apigClientFactory.newClient({ apiKey: "SbUeAda0h01crDQw4KlsY9kNLE7E2YNQ2FXxfdVb" });
+  var apigClient = apigClientFactory.newClient({ apiKey: "apikey" });
 
   var params = {
     "key": name,
@@ -62,7 +62,7 @@ function searchFromVoice() {
     const speechToText = event.results[0][0].transcript;
     console.log(speechToText)
 
-    var apigClient = apigClientFactory.newClient({ apiKey: "SbUeAda0h01crDQw4KlsY9kNLE7E2YNQ2FXxfdVb" });
+    var apigClient = apigClientFactory.newClient({ apiKey: "apikey" });
     var params = {
       "q": speechToText
     };
@@ -93,7 +93,7 @@ function searchFromVoice() {
 
 function search() {
   var searchTerm = document.getElementById("search").value;
-  var apigClient = apigClientFactory.newClient({ apiKey: "SbUeAda0h01crDQw4KlsY9kNLE7E2YNQ2FXxfdVb" });
+  var apigClient = apigClientFactory.newClient({ apiKey: "apikey" });
   var params = {
     "q": searchTerm
   };
